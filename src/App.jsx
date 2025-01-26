@@ -16,7 +16,7 @@ const App = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 540);
+            setIsMobile(window.innerWidth <= 640);
         };
         handleResize();
         window.addEventListener("resize", handleResize);
@@ -24,7 +24,7 @@ const App = () => {
     }, []);
     const scroll = new LocomotiveScroll();
     return (
-        <div className="h-full cursor-none main overflow-x-hidden w-full text-white bg-[#0c0c0c]">
+        <div className="h-full sm:cursor-none main overflow-x-hidden w-full text-white bg-[#0c0c0c]">
             {!isMobile && <Cursor />}
             <Navbar />
             <Work />
