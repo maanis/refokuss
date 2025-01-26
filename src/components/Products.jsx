@@ -42,13 +42,13 @@ const Products = () => {
     const [pos, setpos] = useState({ y: 0, show: false })
 
     return (
-        <div className='mt-24 max-md:mt-16 max-sm:mt-10 relative'>
+        <div className='mt-24 max-md:mt-16 max-sm:mt-8 relative'>
             {products.map((product, index) => (
                 <div key={index}>
                     <Product title={product.title} show={pos.show} index={index} gradient={product.gradient} setPos={setpos} description={product.description} btn2={product.btn2} />
                     <div className="absolute h-full w-full top-[0] pointer-events-none">
 
-                        <motion.div initial={{ y: 0, x: "-50%" }} transition={{ ease: [0.87, 0, 0.13, 1], duration: .6 }} animate={{ y: pos.y + `rem` }} className="window h-[14rem] max-sm:w-48 w-80 max-md:w-64 absolute overflow-hidden pointer-events-none  left-[45%] max-[1190px]:left-[46%] max-[890px]:left-[43%] max-md:left-[42%] max-sm:left-[74%] max-[390px]:left-[72%] max-[390px]:w-40 -translate-x-1/2">
+                        <motion.div initial={{ y: 0, x: "-50%" }} transition={{ ease: [0.87, 0, 0.13, 1], duration: .6 }} animate={{ y: pos.y + `rem` }} className="window h-[14rem] max-sm:w-60 w-80 max-md:w-64 absolute overflow-hidden pointer-events-none  left-[45%] max-[1190px]:left-[46%] max-[890px]:left-[43%] max-md:left-[42%] max-sm:left-[67%] max-[390px]:left-[70%] max-[390px]:w-44 -translate-x-1/2">
                             <motion.div animate={{ y: -pos.y + `rem` }} className=" h-full w-full"><video width={"450px"} transition={{ ease: [0.87, 0, 0.13, 1], duration: .5 }} src={video1} autoPlay muted loop className={`w-full h-full rounded-lg object-cover ${!pos.show ? 'hidden' : ''}`}></video></motion.div>
                             <motion.div animate={{ y: -pos.y + `rem` }} className=" h-full w-full"><video width={"450px"} transition={{ ease: [0.87, 0, 0.13, 1], duration: .5 }} src={video2} autoPlay muted loop className={`w-full h-full rounded-lg object-cover ${!pos.show ? 'hidden' : ''}`}></video></motion.div>
                             <motion.div animate={{ y: -pos.y + `rem` }} className=" h-full w-full"><video width={"450px"} transition={{ ease: [0.87, 0, 0.13, 1], duration: .5 }} src={video3} autoPlay muted loop className={`w-full h-full rounded-lg object-cover ${!pos.show ? 'hidden' : ''}`}></video></motion.div>
