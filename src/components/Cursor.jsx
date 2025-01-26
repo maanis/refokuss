@@ -20,7 +20,7 @@ const Cursor = () => {
 
     return (
         <div
-            className={`w-[20px] z-50 h-[20px] custom-cursor rounded-full absolute -translate-x-1/2 -translate-y-1/2 bg-white`}
+            className={`w-[20px] z-50  h-[20px] custom-cursor rounded-full absolute -translate-x-1/2 -translate-y-1/2 bg-white`}
             style={{
                 top: `${position.y}px`,
                 left: `${position.x}px`,

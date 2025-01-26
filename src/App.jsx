@@ -11,10 +11,21 @@ import Cursor from './components/Cursor';
 import Marqs from './components/Marqs';
 
 const App = () => {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 540);
+        };
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     const scroll = new LocomotiveScroll();
     return (
         <div className="h-full cursor-none main overflow-x-hidden w-full text-white bg-[#0c0c0c]">
-            <Cursor />
+            {!isMobile && <Cursor />}
             <Navbar />
             <Work />
             <Stripes />
