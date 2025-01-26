@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import LocomotiveScroll from 'locomotive-scroll';
 
 import Navbar from './components/Navbar';
